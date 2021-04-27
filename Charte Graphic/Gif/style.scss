@@ -1,0 +1,48 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #0d161f;
+    font-family: 'Lato', sans-serif;
+
+    #loader-container
+    {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 47%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+
+        img 
+        {
+            position: absolute;
+        top: -55%;
+        right: -400px;
+        }
+        p
+        {
+            color: white;
+            font-size: 22px;
+            position: relative;
+            top: 180px;
+            left: 230px;
+        }
+
+        .loader-div
+        {
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            border: 8px solid none;
+            border-top: 8px solid #09f;
+            border-radius: 51110%;
+            animation: rotate 5s linear infinite;
+
+            @keyframes rotate {
+                100% {transform: rotate(360deg);}
+                
+            }
+        }
+    }
+}
