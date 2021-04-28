@@ -125,8 +125,7 @@ h3.heading-style-3::after {
  
   position: relative;
   margin-bottom: 0;
-  top: -480px;
-  left: 680px;
+  
 }
 
 .item_content h5 {
@@ -178,6 +177,20 @@ h3.heading-style-3::after {
     line-height: 24px;
     margin-bottom: 10px;
     color: #ffffff;
+}
+#maintop{
+  padding-top: 50px;
+padding-bottom: 160px;
+}
+.mod-newsflash-adv.mod-newsflash-adv__home_services1 .row .item {
+  position: relative;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 996px){
+    .item_content{
+      position: relative;
+      right: 100px;
+    }
 }
 /* .desc2 {
   padding-top: 20px;
