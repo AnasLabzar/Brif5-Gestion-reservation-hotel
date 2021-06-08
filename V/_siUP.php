@@ -1,4 +1,15 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+include '../C/customers.php';
+if (isset($_POST["submit_up"])) {
+    // print_r($_POST);
+    $customers1 = new Customers;
+    $customers1->insertDataUp();
+}
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,71 +19,52 @@
     <title>M Diamant | Hôtel | Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
-      />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 
 <body>
     <section>
-        <div class="divav">
-                <a href="./index.html">
+        <div>
+            <a href="./index.html">
                 <img class="logo" src="../Charte Graphic/Logo/logo 1er.png" alt="" width="200px">
             </a>
-
         </div>
         <div class="titre">
             <p>YOU WELCOM <span><br>Sign in With</span> </p>
         </div>
-        <div class="login-content">
+        <form action="" method="POST">
+        <div class="login-content" >
             <div class="input-div one">
                 <div class="i">
                     <i class="fas fa-user"></i>
                 </div>
-                <div class="container">
-                    <form id="login" onsubmit="process(event)">
-                      <input id="phone" type="tel" name="phone" />
-                    </form>
-                   </div>
+                <div class="div">
+                    <h5>Full Name</h5>
+                    <input type="name" class="input" value="" name="name" id="name" onchange="validate()">
+                </div>
             </div>
             <div class="input-div one">
                 <div class="i">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="div">
-                    <h5>dd/mm/yy</h5>
-                    <input type="text" class="input" name="date_ann">
+                    <h5>Email</h5>
+                    <input type="email" class="input" value="" name="email" id="email">
                 </div>
             </div>
-            <div class="input-div country">
+            <div class="input-div pass">
                 <div class="i">
                     <i class="fas fa-lock"></i>
                 </div>
                 <div class="div">
-                    <h5>Country</h5>
-                    <input type="text" class="input" name="country">
-                    
+                    <h5>Password</h5>
+                    <input type="password" class="input" value="" name="password" id="password">
                 </div>
             </div>
-            <div class="form-check" style="margin-top: 30px;">
-                <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1" value="Male">
-                <label class="form-check-label" for="flexRadioDefault1" style="color: #999;">
-                  Male 
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" checked value="Female">
-                <label class="form-check-label" for="flexRadioDefault2" style="color: #999;">
-                  Female
-                </label>
-              </div>
-              <p style="color: #999; "><input type="checkbox" required name="terms" style="margin-top: 40px;"> I accept the <u style="cursor: pointer;">Terms and Conditions</u></p>
-              <a href="./_login.html">
-            <input type="submit" name="submit" class="btn" value="Continue">
-        </a>
+            <button type="submit" class="btn" name="submit_up">Nexte</button>
             <a href="./_login.html">Do you already have an account ?</a>
+        </form>
     </section>
 
 
@@ -330,22 +322,7 @@
             cursor: pointer;
             transition: .5s;
         }
-        #phone{
-            background: none;
-            border: none;
-            padding-left: 90px !important;
-            
-        }
-        #login{
-             position: relative !important;
-             right: 30px;
-             top: 5px;
-            /*bottom: 30px !important; */
-        }
-        .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container{
-            position: absolute !important;
-            right: 50px !important;
-        }
+        
     </style>
     <script>
         const inputs = document.querySelectorAll(".input");
@@ -369,6 +346,7 @@
             input.addEventListener("blur", remcl);
         });
     </script>
+    <script src="../C/regeX.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
     </script>
@@ -378,13 +356,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
         integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
     </script>
-    <script>
-        const phoneInputField = document.querySelector("#phone");
-        const phoneInput = window.intlTelInput(phoneInputField, {
-          utilsScript:
-            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-        });
-      </script>
 </body>
 
 </html>

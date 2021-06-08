@@ -15,10 +15,9 @@
 <body>
     <section>
         <div>
-            <img src="../fk/ch4.jpg" alt="" width="1900px" height="1080px">
-
+            <a href="./index.html">
                 <img class="logo" src="../Charte Graphic/Logo/logo 1er.png" alt="" width="200px">
-
+            </a>
         </div>
         <div class="titre">
             <p>YOU WELCOM <span><br>Sign in With</span> </p>
@@ -42,7 +41,7 @@
                     <input type="password" class="input">
                 </div>
             </div>
-            <input type="submit" class="btn" value="Continue">
+            <button type="submit" class="btn">Continue</button>
             <a href="#">Forgot Password?</a>
             <div class="avec_s">
                 <p>OR</p>
@@ -54,9 +53,8 @@
                     <img src="../fk/google-plus (1).png" alt="Google+">
                     <p class="s_p">With Google+</p>
                 </div>
-                <a href="./_siUP.html">
                 <div class="sin_up">
-                    <p class="s_p">Sign UP</p>
+                    <button class="s_p" type="submit" name="submit" ><a href="./_siUP.php"> Sign Up</a> </button>
                 </div>
                 
             </div>
@@ -70,6 +68,7 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
             background-color: #04202a;
+            background-image: url(../fk/ch5.jpg);
         }
 
         section img {
@@ -80,16 +79,12 @@
         }
 
         section .logo {
-            position: absolute;
-            top: -10px;
-            /* left: 845px; */
-            left: calc(50% - 110px);
+            margin: 0 auto;
+            display: flex;
         }
         .titre {
             display: flex;
             justify-content: center;
-            position: relative;
-            bottom: 920px;
             color: #b09b7f;
             font-family: 'Prata', sans-serif;
             font-size: 27px;
@@ -109,8 +104,6 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative;
-            bottom: 900px;
             font-family: 'Poppins', sans-serif;
             /* font-weight: 700; */
             /* padding-right: 100px; */
