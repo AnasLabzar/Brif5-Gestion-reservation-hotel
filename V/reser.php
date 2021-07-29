@@ -1,7 +1,4 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-
-<?php
+﻿<?php
 session_start();
 include '../C/customers.php';
 if (isset($_POST["submit"])) {
@@ -10,8 +7,11 @@ if (isset($_POST["submit"])) {
     $customers1->insertData();
 }
 
+
 // print_r($_SESSION);
 ?>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">

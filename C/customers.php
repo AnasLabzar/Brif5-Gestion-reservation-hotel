@@ -24,6 +24,7 @@ class Customers extends Db
 	}
 	// 	Update customer data into customer table
 	// Update type chamber simple/double
+	// start step 2
 	public function updateRecord()
 	{
 		$select=$_POST['selectCh'];
@@ -41,9 +42,9 @@ class Customers extends Db
 		    }else{
 			    echo "Registration updated failed try again!";
 		    }
-		   }
-		
-		else if($select == "Double"){
+		   
+		}else if($select == "Double"){
+			
 			$query = "UPDATE hotel.stay SET ty_chamber = '$select' WHERE id =". $_SESSION['curr_reservation'];
 		$sql = $this->db->query($query);
 		if ($sql==true) {
@@ -60,6 +61,8 @@ class Customers extends Db
 		$query = "UPDATE hotel.stay SET ty_vue = '$select1' WHERE id =". $_SESSION['curr_reservation'];
 	    $sql = $this->db->query($query);
 	       if ($sql==true) {
+			echo ("inside inter");
+			die();
 		    header("Location:reser2.php");
 	       }else{
 		     echo "Registration updated failed try again!";
@@ -85,6 +88,8 @@ class Customers extends Db
 			$query = "UPDATE hotel.stay SET ty_lit = '$select2' WHERE id =". $_SESSION['curr_reservation'];
 			$sql = $this->db->query($query);
 			   if ($sql==true) {
+				echo ("inside inter");
+				die();
 				header("Location:reser2.php");
 			   }else{
 				 echo "Registration updated failed try again!";
@@ -160,7 +165,8 @@ class Customers extends Db
 
 	}
 
-	}
+	} // end of step 2
+	
 	// ************************* sign up *************************
 	// inserer first step (signup)
 	public function insertDataUp(){
@@ -168,7 +174,6 @@ class Customers extends Db
 			$name=htmlspecialchars(strtolower(trim($_POST['name'])));
 			$email=htmlspecialchars(strtolower(trim($_POST['email'])));
             $password=htmlspecialchars(trim($_POST['password']));
-
 			// $phone = $_POST['phone'];
 			// $date_ann = $_POST['date_ann'];
 			// $country = $_POST['country'];
@@ -183,7 +188,7 @@ class Customers extends Db
 			}
 			header("Location:_siUP1.php");
 		}else {
-			header("#");
+			echo"erreur";
 		}
 
 		

@@ -23,7 +23,6 @@ if (isset($_POST["submittt"])) {
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,7 +64,7 @@ if (isset($_POST["submittt"])) {
         <form method="POST" action="">
         <div class="barr_res">
             <div class="input-group mb-3">
-                <select class="form-select" id="inputGroupSelect01" name="selectpen" onchange="populote()">
+                <select class="form-select" id="inputGroupSelect011" name="selectpen" onchange="populote()">
                     <option selected>Choisie le type de Pension</option>
                     <option value="sans" id="op1">Sans</option>
                     <option value="demi" id="op2">Demi</option>
@@ -73,7 +72,7 @@ if (isset($_POST["submittt"])) {
                 </select>
                 <div id="affichage"></div>
 
-                <button type="submit" name="submittt">Next Step</button>
+                <button type="submit" name="submittt" onclick="type_pens()">Next Step</button>
 
             </div>
             
@@ -186,6 +185,7 @@ if (isset($_POST["submittt"])) {
             integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
         </script>
         <script src="./reser2.js"></script>
+        <script src="./price.js"></script>
 
 </body>
 

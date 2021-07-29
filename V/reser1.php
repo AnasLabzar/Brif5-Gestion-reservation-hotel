@@ -71,7 +71,8 @@ if (isset($_POST["submitt"])) {
                     </select>
                     <div id="affichage"></div>
 
-                    <button type="submit" name="submitt">Next Step</button>
+                    <button type="submit" name="submitt" onclick="type_ch()">Next Step</button>
+
 
                 </div>
                 

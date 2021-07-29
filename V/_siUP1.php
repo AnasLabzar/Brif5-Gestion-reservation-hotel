@@ -56,8 +56,8 @@ if (isset($_POST["submit_up1"])) {
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="div">
-                    <h5>yy/mm/dd</h5>
-                    <input type="date" class="input" name="date_ann" min="1920-01-01" max="2003-12-31">
+                    <h5>yyyy/mm/dd</h5>
+                    <input type="text" class="input" name="date_ann" min="1920-01-01" max="2003-12-31">
                 </div>
             </div>
             <div class="input-div country">
